@@ -1,0 +1,84 @@
+<div id="plansPanel" class="plans">
+    <a  mat-dialog-close class="closebtn" >
+        <span class="material-icons">
+            west
+            </span>
+    </a>
+    <div class="plan d-flex w-100">
+        <div class="w-40">
+            <div class="plan-list">
+                <a class="" >
+                    <div class="card">
+                        <img class="card-img-top" src="assets/images/neon-lights.jpg" alt="Card image cap">
+                        <div class="card-body specifies">
+                            <h2>Expert Advisory</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas
+                                necessitatibus sit</p>
+                            <button id="expertBlock" class="btn btn-success text-capitalCase f-16" (click)="open('ExpertBlockInner')">Start</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" >
+                    <div class="card">
+                        <img class="card-img-top" src="assets/images/neon-lights.jpg" alt="Card image cap">
+                        <div class="card-body specifies">
+                            <h2>Automated Advisory</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas
+                                necessitatibus sit</p>
+                            <button id="automatedBlock" class="btn btn-success text-capitalCase f-16" (click)="open('automatedBlockInner')">Start</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="w-60">
+            <div id="plansPanelInner" class="plansInner">
+                <div id="expertBlockInner">
+                    <div class="col-md-12 text-center">
+                        <div class="form-header mb-5">
+                            <h3>Welcome back!</h3>
+                            <p>Enter your details</p>
+                        </div>
+                        <form class="pt-5">
+                            <div class="form-group mb-5">
+                                <div class="otp-wrapper otp-event">
+                                    <input type="tel" class="otp-number-input form-control"
+                                        placeholder="Mobile Number" />
+                                </div>
+                                <div class="content-label-2 text-left">
+                                    <a>We will send an OTP to the provided phone number</a>
+                                </div>
+                            </div>
+                            <button type="submit" value="Submit"
+                                class="btn btn-success px-5 text-capitalCase" >login/register</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="automatedBlockInner">
+                  
+                    <div class="col-md-12 text-center">
+                        <div class="form-header mb-5">
+                            <h3>Automated Advisory</h3>
+                            <p>Enter your details</p>
+                        </div>
+                        <form class="pt-5">
+                            <div class="form-group mb-5">
+                                <div class="otp-wrapper otp-event">
+                                    <input type="tel" class="otp-number-input form-control"
+                                        placeholder="Mobile Number" />
+                                </div>
+                                <div class="content-label-2 text-left">
+                                    <a>We will send an OTP to the provided phone number</a>
+                                </div>
+                            </div>
+                            <button type="submit" value="Submit"
+                                class="btn btn-success px-5 text-capitalCase" >login/register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
