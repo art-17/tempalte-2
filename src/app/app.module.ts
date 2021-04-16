@@ -13,6 +13,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { ServicesComponent } from './services/services.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
 import { AllPlansComponent } from './all-plans/all-plans.component';
+import { VideoPopupComponent } from './video-popup/video-popup.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AllPlansComponent } from './all-plans/all-plans.component';
     FooetrComponent,
     ServicesComponent,
     LoginModalComponent,
-    AllPlansComponent
+    AllPlansComponent,
+    VideoPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +33,11 @@ import { AllPlansComponent } from './all-plans/all-plans.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LoginModalComponent, AllPlansComponent]
+  entryComponents: [LoginModalComponent, AllPlansComponent, VideoPopupComponent]
 })
 export class AppModule { }

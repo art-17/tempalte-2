@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-all-plans',
@@ -6,13 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-plans.component.css']
 })
 export class AllPlansComponent implements OnInit {
-
-  constructor() { }
+ 
+  expertBlockInner : boolean = false;
+  automatedBlockInner : boolean = false;
+  constructor(public dialogRef: MatDialogRef<AllPlansComponent>) { }
 
   ngOnInit(): void {
+    this.dialogRef.updatePosition({
+
+    right: `0`});
   }
-  open(id){
-    document.getElementById(id).style.display = 'block';
+  openExpertBlockInner(){
+    this.expertBlockInner = true;
+    this.automatedBlockInner = false;
   }
 
+  openAutomatedBlockInner(){
+ 
+    this.automatedBlockInner = true;
+    this.expertBlockInner = false;
+  }
 }

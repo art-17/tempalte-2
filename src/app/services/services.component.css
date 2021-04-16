@@ -1,0 +1,90 @@
+::ng-deep .custom-class.modal {
+    left: auto !important;
+    right: 0 !important;
+    width: auto;
+    border-radius: 43px 0 0 43px;
+    border: 0;
+    overflow: hidden;
+}
+::ng-deep .modal-body {
+    padding: 0;
+}
+::ng-deep .custom-class .modal-dialog {
+    
+    max-width: 1700px !important;
+    margin: 0 !important;
+    max-height: 100vh;
+    height: 100%;
+    
+}
+::ng-deep .custom-class .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    height: 100vh;
+}
+.custom-width{
+    width: 1200px;
+}
+
+@media (max-width: 1440px){
+    .custom-class .modal-dialog {
+        max-width: 1220px !important;
+    }
+    .custom-width {
+        width: 600px;
+    }
+}
+
+
+@media (max-width: 1366px){
+    .custom-class .modal-dialog {
+        max-width: 1220px !important;
+    }
+    .custom-width {
+        width: 600px;
+    }
+}
+@media (max-width: 1280px){
+    .card {
+        height: 312px;
+    }
+    .card:hover .specifies {
+        padding: 42px 30px;
+    }
+}
+@media (max-width: 960px){
+    .custom-class .modal-dialog {
+        max-width: 800px !important;
+    }
+    .custom-width {
+        width: 400px;
+    }
+    .card {
+        height: 222px;
+        width: 18rem;
+    }
+    .card:first-child {
+        margin-bottom: 18px;
+    }
+    .specifies h2 {
+        font-size: 22px;
+    }
+    .card:hover .specifies{
+        padding: 18px 24px 2px;
+    }
+    .specifies .card-text {
+        line-height: 22px;
+        margin-bottom: 12px;
+    }
+    .plan-list {
+        padding: 100px 70px 0 0;
+    }
+}

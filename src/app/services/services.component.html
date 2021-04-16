@@ -10,12 +10,12 @@
                             <p class="mb-5">Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas
                                 necessitatibus sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis</p>
-                            <a href="#" class="btn btn-white px-5 mr-4" (click)="$event.preventDefault(); openPlans();">Start a plan</a>
-                            <a href="#" class="btn btn-white btn-outline-white px-5">Get in touch</a>
+                            <a href="#" class="btn btn-white px-5 mr-4" (click)="open(content)">Start a plan</a>
+                            <a href="#" class="btn btn-white btn-outline-white px-5" >Get in touch</a>
                         </div>
                         <div class="col-lg-5 ml-auto h-50 text-center vedio-icon">
                             <!-- <ion-icon name="caret-forward-circle-outline"></ion-icon> -->
-                            <span class="material-icons">
+                            <span class="material-icons" (click)="openVideo();">
                                 play_arrow
                                 </span>
                         </div>
@@ -25,3 +25,106 @@
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <!-- <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> -->
+    <div class="modal-body">
+        <div id="plansPanel" class="plans">
+            <!-- <a  mat-dialog-close class="closebtn" >
+                <span class="material-icons">
+                    west
+                    </span>
+            </a> -->
+            <button type="button" class="close closebtn" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span class="material-icons">
+                    west
+                    </span>
+              </button>
+            <div class="plan d-flex w-100">
+                <div class="">
+                    <div class="plan-list">
+                        <!-- <a class="" > -->
+                            <div class="card">
+                                <img class="card-img-top" src="assets/images/neon-lights.jpg" alt="Card image cap">
+                                <div class="card-body specifies">
+                                    <h2>Expert Advisory</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas
+                                        necessitatibus sit</p>
+                                        <!-- <button id="expertBlock" class="btn btn-success text-capitalCase f-16">Start</button> -->
+                                    <button id="expertBlock" class="btn btn-success text-capitalCase f-16" (click)="openExpertBlockInner()">Start</button>
+                                </div>
+                            </div>
+                        <!-- </a> -->
+                        <!-- <a href="#" > -->
+                            <div class="card">
+                                <img class="card-img-top" src="assets/images/neon-lights.jpg" alt="Card image cap">
+                                <div class="card-body specifies">
+                                    <h2>Automated Advisory</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas
+                                        necessitatibus sit</p>
+                                        <!-- <button id="automatedBlock" class="btn btn-success text-capitalCase f-16" >Start</button> -->
+                                    <button id="automatedBlock" class="btn btn-success text-capitalCase f-16" (click)="openAutomatedBlockInner()">Start</button>
+                                </div>
+                            </div>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div >
+                    <div id="plansPanelInner" class="plansInner">
+                        <div id="expertBlockInner" *ngIf='expertBlockInner' class="custom-width">
+
+                            <div class="col-md-8 mx-auto text-center">
+                                <div class="form-header mb-5">
+                                    <h3>Welcome back!</h3>
+                                    <p>Enter your details</p>
+                                </div>
+                                <form class="pt-5">
+                                    <div class="form-group mb-5">
+                                        <div class="otp-wrapper otp-event">
+                                            <input type="tel" class="otp-number-input form-control"
+                                                placeholder="Mobile Number" />
+                                        </div>
+                                        <div class="content-label-2 text-left">
+                                            <a>We will send an OTP to the provided phone number</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" value="Submit"
+                                        class="btn btn-success px-5 text-capitalCase" >login/register</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="automatedBlockInner" *ngIf='automatedBlockInner' class="custom-width">
+                          
+                            <div class="col-md-8 mx-auto text-center">
+                                <div class="form-header mb-5">
+                                    <h3>Automated Advisory</h3>
+                                    <p>Enter your details</p>
+                                </div>
+                                <form class="pt-5">
+                                    <div class="form-group mb-5">
+                                        <div class="otp-wrapper otp-event">
+                                            <input type="tel" class="otp-number-input form-control"
+                                                placeholder="Mobile Number" />
+                                        </div>
+                                        <div class="content-label-2 text-left">
+                                            <a>We will send an OTP to the provided phone number</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" value="Submit"
+                                        class="btn btn-success px-5 text-capitalCase" >login/register</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </ng-template>
